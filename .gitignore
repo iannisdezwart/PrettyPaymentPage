@@ -1,0 +1,10 @@
+node_modules/
+
+# Build files
+web/cache/
+web/root
+web/pages.json
+*.js
+
+# Config files with secrets
+.env

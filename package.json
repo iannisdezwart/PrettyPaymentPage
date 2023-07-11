@@ -1,0 +1,22 @@
+{
+  "name": "pretty-payment-page",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc && cd web && node generator.js",
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "Iannis de Zwart",
+  "license": "ISC",
+  "dependencies": {
+    "@types/express": "^4.17.17",
+    "body-parser": "^1.20.2",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "page-compiler": "file:page-compiler-0.1.9.tgz",
+    "stripe": "^12.12.0"
+  }
+}
