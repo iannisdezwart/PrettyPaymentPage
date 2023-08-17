@@ -1,0 +1,42 @@
+@import '../../styles/global.sass'
+
+#payment-form
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+
+    #confirm-button
+        @include donation-button
+
+        &.disabled
+            background-color: $bg-tertiary
+            color: $text-tertiary
+            cursor: not-allowed
+
+    #error-message
+        color: $attention-primary
+        font-size: 0.75rem
+        margin-top: 1.5rem
+        text-align: center
+        width: 250px
+        box-sizing: border-box
+
+        &:empty
+            display: none
+
+    p.privacy-policy
+        color: $text-tertiary
+        font-size: 0.75rem
+        text-align: center
+        width: 250px
+        margin-top: 0
+        margin-bottom: 1.25rem
+
+        a[href]
+            color: $accent-primary
+            text-decoration: none
+            font-style: italic
+
+            &:hover
+                text-decoration: underline

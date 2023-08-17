@@ -1,0 +1,94 @@
+{
+  "langCode": "nl",
+  "home": {
+    "title": "Home",
+    "donationOptions": {
+      "oneTime": {
+        "title": "Eenmalig",
+        "promptText": "Doneer {} via:"
+      },
+      "monthly": {
+        "title": "Maandelijks",
+        "promptText": "Doneer maandelijks {} via:"
+      }
+    }
+  },
+  "donationAmountCard": {
+    "title": "Draag bij met uw donatie",
+    "subtitle": "Uw donatie wordt ontvangen door de Non-profit Foundation",
+    "customAmountLabel": "Ander bedrag"
+  },
+  "donateOnce": {
+    "title": "Doneer"
+  },
+  "donationPaymentCard": {
+    "privacy-policy": "Door op de onderstaande knop te klikken, erken ik en ga ik akkoord met het {privacybeleid} van de Non-profit Stichting.."
+  },
+  "oneTimeDonationPaymentCard": {
+    "title": "Eenmalige gift van {}",
+    "paymentOptions": {
+      "ideal": {
+        "title": "iDEAL",
+        "confirmButton": "Doneer met iDEAL"
+      },
+      "paypal": {
+        "title": "PayPal",
+        "confirmButton": "Doneer met PayPal"
+      }
+    }
+  },
+  "billingDetails": {
+    "fields": {
+      "email": {
+        "label": "E-mail",
+        "placeholder": "email@voorbeeld.nl",
+        "tooltip": "We versturen een bevestiging van uw donatie naar dit e-mailadres."
+      },
+      "name": {
+        "label": "Naam",
+        "placeholder": "Hans Jansen",
+        "tooltip": ""
+      },
+      "addressLine": {
+        "label": "Straat + huisnr.",
+        "placeholder": "Leidsedwarstraat 12",
+        "tooltip": ""
+      },
+      "city": {
+        "label": "Woonplaats",
+        "placeholder": "Amsterdam",
+        "tooltip": ""
+      },
+      "postalCode": {
+        "label": "Postcode",
+        "placeholder": "1017PW",
+        "tooltip": ""
+      },
+      "country": {
+        "label": "Land",
+        "tooltip": ""
+      },
+      "phone": {
+        "label": "Telefoonnr.",
+        "placeholder": "+31612345678",
+        "tooltip": ""
+      }
+    }
+  },
+  "donateOnceCompleted": {
+    "title": "Bedankt voor uw donatie!",
+    "success": {
+      "title": "Bedankt voor uw donatie!",
+      "headerText": "<strong>De Non-profit Foundation heeft uw donatie ontvangen.</strong><br>U ontvangt een e-mail ter bevestiging van uw donatie.",
+      "doneButtonText": "Terug naar de website"
+    },
+    "failure": {
+      "title": "Er is iets misgegaan...",
+      "headerText": "<strong>Uw donatie kon niet worden verwerkt.</strong><br>Er is iets misgegaan tijdens het verwerken van uw donatie. Wij hebben geen geld van uw rekening afgehaald. Probeer het alstublieft nogmaals.",
+      "doneButtonText": "Probeer nogmaals"
+    }
+  },
+  "privacyPolicy": {
+    "title": "Privacybeleid"
+  }
+}

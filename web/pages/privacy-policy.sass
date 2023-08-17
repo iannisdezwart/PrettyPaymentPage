@@ -1,0 +1,35 @@
+@import '../styles/global.sass'
+
+.page
+    display: flex
+    justify-content: center
+
+    .card
+        padding: 3rem
+        margin: 3rem
+        max-width: 600px
+
+        background-color: $bg-secondary
+        border-radius: 0.5rem
+        box-shadow: $shadow-bottom-large-slight
+
+        .back-button
+            margin-bottom: 1rem
+
+            display: flex
+            align-items: center
+
+            font-weight: 500
+            color: $text-tertiary
+
+            cursor: pointer
+
+        .content
+            display: flex
+            flex-direction: column
+
+            h1, h2, h3, h4, h5, h6, p
+                margin: 0
+
+            .ql-indent-1
+                margin-left: 2rem

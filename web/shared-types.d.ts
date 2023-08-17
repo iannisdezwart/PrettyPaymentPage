@@ -1,0 +1,1 @@
+type DonationFrequency = 'once' | 'monthly'

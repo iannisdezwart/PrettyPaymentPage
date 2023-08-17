@@ -1,0 +1,89 @@
+@import '../../../styles/global.sass'
+
+.card
+    display: flex
+    flex-direction: column
+
+    margin-top: 3rem
+    background-color: $bg-secondary
+    border-radius: 0.5rem
+    box-shadow: $shadow-bottom-large-slight
+
+    .card-content-tab
+        grid-area: 1 / 1 / 2 / 2
+        visibility: hidden
+        opacity: 0
+
+        transition: visibility 0.4s ease-in-out, opacity 0.4s ease-in-out
+
+        &.selected
+            visibility: visible
+            opacity: 1
+
+        .card-content-tab-inner
+            display: flex
+            flex-direction: column
+            align-items: center
+
+    .card-header
+        position: relative
+        display: flex
+        flex-direction: column
+        align-items: center
+        padding: 1rem
+        padding-bottom: 0
+
+        background-color: $bg-primary
+        border-radius: .5rem
+        box-shadow: $shadow-bottom-large-slight
+
+        .card-header-icon
+            background-color: $bg-primary
+            box-shadow: $shadow-bottom-large-strong
+            width: 2.5rem
+            height: 2.5rem
+            padding: 1rem
+            border-radius: 50%
+            margin-top: -3.5rem
+
+            svg
+                width: 100%
+                height: 100%
+
+        p
+            color: $text-tertiary
+            font-size: 0.75rem
+            margin-top: 0
+            text-align: center
+            width: 250px
+            box-sizing: border-box
+
+            &:empty
+                display: none
+
+
+        .card-header-back-button
+            position: absolute
+            top: 1rem
+            left: 1rem
+
+            display: flex
+            align-items: center
+            justify-content: center
+
+            font-weight: 500
+            color: $text-tertiary
+
+            cursor: pointer
+
+        .card-header-content
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: center
+            padding-bottom: 2rem
+
+    .card-content
+        display: grid
+        grid-template-columns: 1fr
+        padding: 1rem

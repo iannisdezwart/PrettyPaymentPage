@@ -1210,6 +1210,7 @@ declare namespace stripe {
       textDecoration?: string | undefined;
       textShadow?: string | undefined;
       textTransform?: string | undefined;
+      padding?: string | undefined;
     }
 
     interface PaymentRequestButtonStyleOptions {

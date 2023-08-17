@@ -1,0 +1,18 @@
+@import '../../../styles/global.sass'
+
+.tab-button
+    outline: none
+    border: none
+    background-color: transparent
+    color: $text-tertiary
+    font-size: .75em
+    font-weight: 500
+    cursor: pointer
+    border-color: transparent
+    padding-bottom: .5rem
+
+    transition: color 0.4s ease-in-out, border-color 0.4s ease-in-out
+
+    &.selected
+        color: $accent-primary
+        border-bottom: 2px solid $accent-primary

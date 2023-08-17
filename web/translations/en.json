@@ -1,0 +1,94 @@
+{
+  "langCode": "en",
+  "home": {
+    "title": "Home",
+    "donationOptions": {
+      "oneTime": {
+        "title": "One-time",
+        "promptText": "Donate {} via:"
+      },
+      "monthly": {
+        "title": "Monthly",
+        "promptText": "Donate {} monthly via:"
+      }
+    }
+  },
+  "donationAmountCard": {
+    "title": "Contribute with your donation",
+    "subtitle": "Your donation will be received by the Non-profit Foundation",
+    "customAmountLabel": "Other amount"
+  },
+  "donateOnce": {
+    "title": "Donate"
+  },
+  "donationPaymentCard": {
+    "privacy-policy": "By clicking the button below, I acknowledge and agree to the {privacy policy} of the Non-profit Foundation."
+  },
+  "oneTimeDonationPaymentCard": {
+    "title": "One-time donation of {}",
+    "paymentOptions": {
+      "ideal": {
+        "title": "iDEAL",
+        "confirmButton": "Donate with iDEAL"
+      },
+      "paypal": {
+        "title": "PayPal",
+        "confirmButton": "Donate with PayPal"
+      }
+    }
+  },
+  "billingDetails": {
+    "fields": {
+      "email": {
+        "label": "Email",
+        "placeholder": "email@example.com",
+        "tooltip": "We'll send your receipt to this address."
+      },
+      "name": {
+        "label": "Name",
+        "placeholder": "John Doe",
+        "tooltip": ""
+      },
+      "addressLine": {
+        "label": "Street + no.",
+        "placeholder": "221B Baker Street",
+        "tooltip": ""
+      },
+      "city": {
+        "label": "City",
+        "placeholder": "London",
+        "tooltip": ""
+      },
+      "postalCode": {
+        "label": "Postal code",
+        "placeholder": "12345",
+        "tooltip": ""
+      },
+      "country": {
+        "label": "Country",
+        "tooltip": ""
+      },
+      "phone": {
+        "label": "Phone no.",
+        "placeholder": "+44123456789",
+        "tooltip": ""
+      }
+    }
+  },
+  "donateOnceCompleted": {
+    "title": "Thank you for your donation!",
+    "success": {
+      "title": "Thank you for your donation!",
+      "headerText": "<strong>Your donation has been received by the Non-profit Foundation.</strong><br>You will receive an email confirming your donation.",
+      "doneButtonText": "Back to the website"
+    },
+    "failure": {
+      "title": "Something went wrong...",
+      "headerText": "<strong>Your donation could not be processed.</strong><br>Something went wrong while processing your donation. No funds were deducted from your account. Please try again.",
+      "doneButtonText": "Try again"
+    }
+  },
+  "privacyPolicy": {
+    "title": "Privacy policy"
+  }
+}

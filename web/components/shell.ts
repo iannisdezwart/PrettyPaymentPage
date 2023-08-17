@@ -1,13 +1,33 @@
-import { PageShell, importGoogleFont } from "page-compiler";
+import {
+  PageShell,
+  importGoogleFont,
+  inlineJS,
+  inlineSASS,
+} from "page-compiler";
 
-export default async (title: string, body: string) =>
+export default async (title: string, body: string, lang: string) =>
   new PageShell({
     head: /* html */ `
       <script src="https://js.stripe.com/v3/"></script>
       ${await importGoogleFont("Work Sans", [{ weight: 300 }, { weight: 500 }])}
+      ${await inlineSASS("components/shell.sass")}
     `,
-  }).render(title, body, {
-    author: "Iannis de Zwart",
-    description: "Payment page ",
-    keywords: [""],
-  });
+  }).render(
+    title,
+    /* html */ `
+      ${body}
+      <div id="page-footer">
+        <div id="page-footer-inner">
+          <a href="/">English</a>
+          <a href="/nl">Nederlands</a>
+        </div>
+      </div>
+      ${await inlineJS("scripts/shell.js")}
+    `,
+    {
+      author: "Iannis de Zwart",
+      description: "Donation page",
+      keywords: [""],
+    },
+    lang
+  );

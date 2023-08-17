@@ -1,0 +1,96 @@
+@import '../../../styles/global.sass'
+
+.text-input
+    position: relative
+    margin: .25rem
+
+    input, select
+        appearance: none
+        background-color: $bg-primary
+        color: $text-secondary
+        font-size: 1rem
+        border: 1px solid $border-color-primary
+        border-radius: 0.5rem
+        outline: none
+        padding: 1.25rem 1rem 0.75rem 1rem
+        box-shadow: $shadow-bottom-small-slight
+        width: 250px
+        box-sizing: border-box
+
+        &::placeholder
+            color: $text-quaternary
+
+        &.error
+            border-color: $attention-primary
+
+    &.has-leading-unit
+        input, select
+            padding-left: 1.75rem
+
+    label
+        position: absolute
+        top: .25rem
+        left: 1rem
+        color: $text-tertiary
+        font-weight: 500
+        font-size: .75rem
+
+        span.required
+            color: $attention-primary
+
+    span.leading-unit
+        position: absolute
+        top: 50%
+        left: 1rem
+        transform: translateY(-50%)
+        padding-top: .57rem
+        color: $text-tertiary
+        font-weight: 500
+        font-size: .75rem
+
+    .info-container
+        position: absolute
+        top: .25rem
+        left: 0
+        width: 100%
+
+        .info
+            position: absolute
+            top: .25rem
+            right: .5rem
+            background-color: $accent-tertiary
+            width: 0.75rem
+            height: 0.75rem
+            border-radius: 50%
+
+            &::before
+                content: url('data:image/svg+xml;utf8,<svg width="4" height="10" viewBox="0 0 4 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.5 2C1.5 1.5 1.5 1.5 2 1.5C2.5 1.5 2.5 1.5 2.5 2C2.5 2.5 2.49999 2.5 2 2.5C1.5 2.5 1.5 2.5 1.5 2Z" stroke="white"/><path d="M2 9V4.5" stroke="white" stroke-width="1.5"/></svg>')
+                color: $bg-primary
+                font-size: .75rem
+                position: absolute
+                top: 0
+                left: 50%
+                transform: translateX(-50%)
+
+            &:hover ~ .tooltip
+                visibility: visible
+                opacity: 1
+
+        .tooltip
+            position: absolute
+            top: 0
+            left: 0
+            visibility: hidden
+            opacity: 0
+            width: 100%
+            transform: translateY(calc(-100% - 2px - 0.5rem))
+            color: $text-secondary
+            background-color: $bg-secondary
+            border: 1px solid $border-color-primary
+            border-radius: 0.5rem
+            font-size: 0.75rem
+            padding: .25rem .5rem
+            box-sizing: border-box
+
+            transition: visibility 0.4s ease-in-out, opacity 0.4s ease-in-out
+
