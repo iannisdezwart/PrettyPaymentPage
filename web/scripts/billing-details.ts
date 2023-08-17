@@ -334,6 +334,7 @@ const timeZoneToCountryMap = {
   Tashkent: "UZ",
   Caracas: "VE",
   Ho_Chi_Minh: "VN",
+  Saigon: "VN",
   Efate: "VU",
   Wallis: "WF",
   Apia: "WS",
