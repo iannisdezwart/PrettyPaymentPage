@@ -41,6 +41,12 @@ export const paypalPaymentHandler: RequestHandler = async (req, res) => {
       receipt_email: body.email,
       return_url: body.returnUrl,
       confirm: true,
+      metadata: {
+        payment_method: "PayPal",
+      },
+      statement_descriptor: process.env["STATEMENT_DESCRIPTOR"].slice(0, 22),
+      statement_descriptor_suffix:
+        process.env["STATEMENT_DESCRIPTOR"].slice(22) || undefined,
     });
 
     res.status(200).send(buildResponse(paymentIntent));

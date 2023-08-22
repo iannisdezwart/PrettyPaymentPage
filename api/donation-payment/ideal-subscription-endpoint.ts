@@ -59,6 +59,9 @@ export const idealSubscriptionEndpoint: RequestHandler = async (req, res) => {
         }
       ],
       mode: "subscription",
+      metadata: {
+        payment_method: "iDEAL subscription",
+      },
     });
 
     res.status(200).send(buildResponse(session));
