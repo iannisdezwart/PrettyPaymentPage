@@ -10,5 +10,6 @@ switch (redirectStatus) {
     document.getElementById("failure").classList.remove("hidden");
     break;
   default:
+    document.getElementById("failure").classList.remove("hidden");
     throw `Invalid redirect status: ${redirectStatus}`;
 }

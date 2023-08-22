@@ -15,14 +15,14 @@
   },
   "donationAmountCard": {
     "title": "Draag bij met uw donatie",
-    "subtitle": "Uw donatie wordt ontvangen door de Non-profit Foundation",
+    "subtitle": "Uw donatie wordt ontvangen door {org name}",
     "customAmountLabel": "Ander bedrag"
   },
   "donateOnce": {
     "title": "Doneer"
   },
   "donationPaymentCard": {
-    "privacy-policy": "Door op de onderstaande knop te klikken, erken ik en ga ik akkoord met het {privacybeleid} van de Non-profit Stichting.."
+    "privacyPolicy": "Door op de onderstaande knop te klikken, erken ik en ga ik akkoord met het {p=privacybeleid} van {org name}.."
   },
   "oneTimeDonationPaymentCard": {
     "title": "Eenmalige gift van {}",
@@ -79,7 +79,7 @@
     "title": "Bedankt voor uw donatie!",
     "success": {
       "title": "Bedankt voor uw donatie!",
-      "headerText": "<strong>De Non-profit Foundation heeft uw donatie ontvangen.</strong><br>U ontvangt een e-mail ter bevestiging van uw donatie.",
+      "headerText": "<strong>{org name} heeft uw donatie ontvangen.</strong><br>U ontvangt een e-mail ter bevestiging van uw donatie.",
       "doneButtonText": "Terug naar de website"
     },
     "failure": {

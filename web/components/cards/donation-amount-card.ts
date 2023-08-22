@@ -43,7 +43,9 @@ export default async (props: DonationAmountCardProps) => {
   return await card({
     svgIconPath: "icons/donate.svg",
     title: props.tr("donationAmountCard.title"),
-    subtitle: props.tr("donationAmountCard.subtitle"),
+    subtitle: props
+      .tr("donationAmountCard.subtitle")
+      .replace("{org name}", process.env["ORG_NAME"]),
     tabs: await Promise.all(
       props.items.map(async (item) => {
         const donationCardTabId = `donation-amount-card-${randomUUID()}`;

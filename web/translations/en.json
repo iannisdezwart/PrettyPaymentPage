@@ -15,14 +15,14 @@
   },
   "donationAmountCard": {
     "title": "Contribute with your donation",
-    "subtitle": "Your donation will be received by the Non-profit Foundation",
+    "subtitle": "Your donation will be received by {org name}",
     "customAmountLabel": "Other amount"
   },
   "donateOnce": {
     "title": "Donate"
   },
   "donationPaymentCard": {
-    "privacy-policy": "By clicking the button below, I acknowledge and agree to the {privacy policy} of the Non-profit Foundation."
+    "privacy-policy": "By clicking the button below, I acknowledge and agree to the {p=privacy policy} of {org name}."
   },
   "oneTimeDonationPaymentCard": {
     "title": "One-time donation of {}",
@@ -79,7 +79,7 @@
     "title": "Thank you for your donation!",
     "success": {
       "title": "Thank you for your donation!",
-      "headerText": "<strong>Your donation has been received by the Non-profit Foundation.</strong><br>You will receive an email confirming your donation.",
+      "headerText": "<strong>Your donation has been received by {org name}.</strong><br>You will receive an email confirming your donation.",
       "doneButtonText": "Back to the website"
     },
     "failure": {

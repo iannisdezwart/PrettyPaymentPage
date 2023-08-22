@@ -31,7 +31,9 @@ export default async ({ tr, ...props }: DonationPaymentCard) =>
           ${props.extraFormFields ? props.extraFormFields : ""}
           <br>
           <p class="privacy-policy">
-            ${tr("donationPaymentCard.privacy-policy").replace(/\{(.*)\}/, `<a href="/privacy-policy">$1</a>`)}
+            ${tr("donationPaymentCard.privacyPolicy")
+              .replace(/\{p=(.*)\}/, `<a href="/privacy-policy">$1</a>`)
+              .replace("{org name}", process.env["ORG_NAME"])}
           </p>
           <input
               value="${props.confirmButtonText}"

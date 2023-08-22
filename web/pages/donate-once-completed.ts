@@ -15,7 +15,10 @@ export default async (tr: Tr) =>
             title: tr("donateOnceCompleted.success.title"),
             headerContent: /* html */ `
               <p id="header-text">
-                ${tr("donateOnceCompleted.success.headerText")}
+                ${tr("donateOnceCompleted.success.headerText").replace(
+                  "{org name}",
+                  process.env["ORG_NAME"]
+                )}
               </p>
               <br>
               <a id="done-button" href="#"> <!-- TODO -->

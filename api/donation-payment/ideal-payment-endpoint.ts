@@ -44,6 +44,10 @@ export const idealPaymentEndpoint: RequestHandler = async (req, res) => {
       receipt_email: body.email,
       return_url: body.returnUrl,
       confirm: true,
+      metadata: {
+        payment_method: "ideal",
+      },
+      statement_descriptor: "Donation to ",
     });
 
     res.status(200).send(buildResponse(paymentIntent));
