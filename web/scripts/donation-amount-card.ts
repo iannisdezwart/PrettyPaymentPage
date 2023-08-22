@@ -133,22 +133,9 @@ const onPaymentMethodClick = (
     throw "No donation amount selected";
   }
 
-  location.href = `${langUrlPart}/donate/${frequency}/${paymentMethod}?amount=${amount}`;
-};
-
-const formatAndSetCustomAmountInputValue = (
-  customAmountInput: HTMLInputElement,
-  digits: number,
-  donationCardTabId: string
-) => {
-  const value = localeFormattedNumberToFloat(customAmountInput.value);
-  const formattedValue = value.toLocaleString(navigator.language, {
-    maximumFractionDigits: digits,
-    minimumFractionDigits: digits,
-  });
-
-  customAmountInput.value = formattedValue;
-  onDonationAmountButtonClick(donationCardTabId, value);
+  if (amount >= 1) {
+    location.href = `${langUrlPart}/donate/${frequency}/${paymentMethod}?amount=${amount}`;
+  }
 };
 
 addEventListener("DOMContentLoaded", () => {
@@ -197,6 +184,49 @@ addEventListener("DOMContentLoaded", () => {
 
     customAmountInput.setAttribute("placeholder", placeholder);
 
+    // Initialise custom amount input error message.
+
+    const errTooLow =
+      donationAmountCard.parentElement.querySelector(".err-too-low");
+
+    errTooLow.innerHTML = errTooLow.innerHTML.replace(
+      "{}",
+      (1).toLocaleString(navigator.language, {
+        style: "currency",
+        currency,
+      })
+    );
+
+    const checkCustomAmountForError = () => {
+      const val = localeFormattedNumberToFloat(customAmountInput.value);
+
+      if (customAmountInput.value != "" && val < 1) {
+        customAmountInput.classList.add("error");
+        errTooLow.classList.add("visible");
+      } else {
+        customAmountInput.classList.remove("error");
+        errTooLow.classList.remove("visible");
+      }
+    };
+
+    customAmountInput.addEventListener("change", checkCustomAmountForError);
+
+    const formatAndSetCustomAmountInputValue = (
+      customAmountInput: HTMLInputElement,
+      digits: number,
+      donationCardTabId: string
+    ) => {
+      const value = localeFormattedNumberToFloat(customAmountInput.value);
+      const formattedValue = value.toLocaleString(navigator.language, {
+        maximumFractionDigits: digits,
+        minimumFractionDigits: digits,
+      });
+
+      customAmountInput.value = formattedValue;
+      onDonationAmountButtonClick(donationCardTabId, value);
+      checkCustomAmountForError();
+    };
+
     // Initialise custom amount currency symbol.
 
     const currencySymbol = (0)
@@ -234,6 +264,7 @@ addEventListener("DOMContentLoaded", () => {
         )}${decimalSeparator}${customAmountInput.value.slice(
           customAmountInput.selectionEnd
         )}`;
+        checkCustomAmountForError();
       } else if (e.key === "Enter") {
         e.preventDefault();
         clearTimeout(autoFormatCustomAmountInputValueTimeout);
@@ -241,12 +272,13 @@ addEventListener("DOMContentLoaded", () => {
       }
     });
 
-    customAmountInput.addEventListener("input", () => {
+    customAmountInput.addEventListener("input", (e) => {
       if (customAmountInput.value.match(/^[0-9]+([\.,][0-9]+)?$/) == null) {
         customAmountInput.value = customAmountInput.value.replace(
           /[^0-9\.,]/g,
           ""
         );
+        checkCustomAmountForError();
       }
 
       // After 3 sec of inactivity, format and set the input value.

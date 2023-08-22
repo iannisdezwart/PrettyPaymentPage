@@ -16,13 +16,14 @@
   "donationAmountCard": {
     "title": "Draag bij met uw donatie",
     "subtitle": "Uw donatie wordt ontvangen door {org name}",
-    "customAmountLabel": "Ander bedrag"
+    "customAmountLabel": "Ander bedrag",
+    "customAmountTooLow": "Het minimale bedrag is {}."
   },
   "donateOnce": {
     "title": "Doneer"
   },
   "donationPaymentCard": {
-    "privacyPolicy": "Door op de onderstaande knop te klikken, erken ik en ga ik akkoord met het {p=privacybeleid} van {org name}.."
+    "privacyPolicy": "Door op de onderstaande knop te klikken, erken ik en ga ik akkoord met het {p=privacybeleid} van {org name}."
   },
   "oneTimeDonationPaymentCard": {
     "title": "Eenmalige gift van {}",

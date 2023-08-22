@@ -16,13 +16,14 @@
   "donationAmountCard": {
     "title": "Contribute with your donation",
     "subtitle": "Your donation will be received by {org name}",
-    "customAmountLabel": "Other amount"
+    "customAmountLabel": "Other amount",
+    "customAmountTooLow": "Minimum amount is {}."
   },
   "donateOnce": {
     "title": "Donate"
   },
   "donationPaymentCard": {
-    "privacy-policy": "By clicking the button below, I acknowledge and agree to the {p=privacy policy} of {org name}."
+    "privacyPolicy": "By clicking the button below, I acknowledge and agree to the {p=privacy policy} of {org name}."
   },
   "oneTimeDonationPaymentCard": {
     "title": "One-time donation of {}",

@@ -83,6 +83,9 @@ export default async (props: DonationAmountCardProps) => {
                   "data-currency": item.currency,
                 },
               })}
+              <p class="err-too-low">${props.tr(
+                "donationAmountCard.customAmountTooLow"
+              )}</p>
               <p class="donate-prompt"
                   data-text-format="${item.promptText}"
                   data-amount="${item.defaultAmount}"

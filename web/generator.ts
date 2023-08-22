@@ -1,3 +1,6 @@
+import dotenv from "dotenv";
+dotenv.config({ path: "../.env" });
+
 import { compilePages, enableDebug } from "page-compiler";
 import donateOnceCompleted from "./pages/donate-once-completed";
 import donateOnceIdeal from "./pages/donate-once-ideal";

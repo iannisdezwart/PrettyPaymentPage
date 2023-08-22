@@ -32,7 +32,7 @@ export default async ({ tr, ...props }: DonationPaymentCard) =>
           <br>
           <p class="privacy-policy">
             ${tr("donationPaymentCard.privacyPolicy")
-              .replace(/\{p=(.*)\}/, `<a href="/privacy-policy">$1</a>`)
+              .replace(/\{p\=(.*?)\}/, `<a href="/privacy-policy">$1</a>`)
               .replace("{org name}", process.env["ORG_NAME"])}
           </p>
           <input
