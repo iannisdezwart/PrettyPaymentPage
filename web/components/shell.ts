@@ -18,8 +18,8 @@ export default async (title: string, body: string, lang: string) =>
       ${body}
       <div id="page-footer">
         <div id="page-footer-inner">
-          <a href="/">English</a>
-          <a href="/nl">Nederlands</a>
+          <a href="/">Nederlands</a>
+          <a href="/en">English</a>
         </div>
       </div>
       ${await inlineJS("scripts/shell.js")}

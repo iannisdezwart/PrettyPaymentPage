@@ -3,8 +3,8 @@ import nl from "./nl.json";
 
 export type Tr = (key: string) => string;
 
-export const defaultLang = "en";
-export const trLangs = ["nl"];
+export const defaultLang = "nl";
+export const trLangs = ["en"];
 
 const translations = { en, nl };
 

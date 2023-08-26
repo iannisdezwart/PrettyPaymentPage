@@ -1,4 +1,4 @@
 const langUrlPart =
-  document.documentElement.lang == "en"
+  document.documentElement.lang == "nl"
     ? ""
     : "/" + document.documentElement.lang;

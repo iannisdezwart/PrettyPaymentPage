@@ -1,4 +1,4 @@
-import { inlineJS, inlineSASS } from "page-compiler";
+import { inlineSASS } from "page-compiler";
 import donationAmountCard from "../components/cards/donation-amount-card";
 import shell from "../components/shell";
 import { Tr } from "../translations/tr";
@@ -44,7 +44,6 @@ export default async (tr: Tr) =>
           ],
         })}
       </div>
-      ${await inlineJS("scripts/auto-select-lang.js")}
     `,
     tr("langCode")
   );
