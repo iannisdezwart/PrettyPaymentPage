@@ -52,7 +52,7 @@
       },
       "addressLine": {
         "label": "Straat + huisnr.",
-        "placeholder": "Leidsedwarstraat 12",
+        "placeholder": "Leidsedwarsstraat 12",
         "tooltip": ""
       },
       "city": {
