@@ -1,21 +1,20 @@
-import { Client } from "pg";
+import { Pool } from "pg";
 
-let pgClient: Client;
+let pgClient: Pool;
 
-const reconnect = async () => {
-  pgClient = new Client({
+const connect = async () => {
+  pgClient = new Pool({
     connectionString: process.env.RETOOL_DB_URL,
     keepAlive: true,
   });
   await pgClient.connect();
 };
 
-reconnect();
+connect();
 
-pgClient.on("end", reconnect);
 pgClient.on("error", (err) => {
   console.error("Postgres client error:", err);
-  reconnect()
+  connect()
 });
 
 export const getPgClient = () => pgClient;
