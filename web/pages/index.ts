@@ -5,7 +5,7 @@ import { Tr } from "../translations/tr";
 
 export default async (tr: Tr) =>
   await shell(
-    tr("home.title"),
+    tr("home.title").replace("{org name}", process.env["ORG_NAME"]),
     /* html */ `
       ${await inlineSASS("pages/index.sass")}
       <div class="page">

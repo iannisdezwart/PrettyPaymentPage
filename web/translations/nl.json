@@ -1,7 +1,7 @@
 {
   "langCode": "nl",
   "home": {
-    "title": "Home",
+    "title": "Doneer - {org name}",
     "donationOptions": {
       "oneTime": {
         "title": "Eenmalig",
@@ -20,7 +20,7 @@
     "customAmountTooLow": "Het minimale bedrag is {}."
   },
   "donateOnce": {
-    "title": "Doneer"
+    "title": "Doneer - {org name}"
   },
   "donationPaymentCard": {
     "privacyPolicy": "Door op de onderstaande knop te klikken, erken ik en ga ik akkoord met het {p=privacybeleid} van {org name}."
@@ -77,7 +77,7 @@
     }
   },
   "donateOnceCompleted": {
-    "title": "Bedankt voor uw donatie!",
+    "title": "Donatie ontvangen - {org name}",
     "success": {
       "title": "Bedankt voor uw donatie!",
       "headerText": "<strong>{org name} heeft uw donatie ontvangen.</strong><br>U ontvangt een e-mail ter bevestiging van uw donatie.",

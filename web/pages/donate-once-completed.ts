@@ -5,7 +5,10 @@ import { Tr } from "../translations/tr";
 
 export default async (tr: Tr) =>
   shell(
-    tr("donateOnceCompleted.title"),
+    tr("donateOnceCompleted.title").replace(
+      "{org name}",
+      process.env["ORG_NAME"]
+    ),
     /* html */ `
       ${await inlineSASS("pages/donate-once-completed.sass")}
       <div class="page">

@@ -4,7 +4,7 @@ import { Tr } from "../translations/tr";
 
 export default async (tr: Tr) =>
   shell(
-    tr("privacyPolicy.title"),
+    tr("privacyPolicy.title").replace("{org name}", process.env["ORG_NAME"]),
     /* html */ `
       ${await inlineSASS("pages/privacy-policy.sass")}
       <div class="page">

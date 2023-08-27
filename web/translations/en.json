@@ -1,7 +1,7 @@
 {
   "langCode": "en",
   "home": {
-    "title": "Home",
+    "title": "Donate - {org name}",
     "donationOptions": {
       "oneTime": {
         "title": "One-time",
@@ -20,7 +20,7 @@
     "customAmountTooLow": "Minimum amount is {}."
   },
   "donateOnce": {
-    "title": "Donate"
+    "title": "Donate - {org name}"
   },
   "donationPaymentCard": {
     "privacyPolicy": "By clicking the button below, I acknowledge and agree to the {p=privacy policy} of {org name}."
@@ -77,7 +77,7 @@
     }
   },
   "donateOnceCompleted": {
-    "title": "Thank you for your donation!",
+    "title": "Donation received - {org name}",
     "success": {
       "title": "Thank you for your donation!",
       "headerText": "<strong>Your donation has been received by {org name}.</strong><br>You will receive an email confirming your donation.",
