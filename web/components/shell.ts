@@ -8,6 +8,7 @@ import {
 export default async (title: string, body: string, lang: string) =>
   new PageShell({
     head: /* html */ `
+      <link rel="icon" href="/favicon.png" />
       <script src="https://js.stripe.com/v3/"></script>
       ${await importGoogleFont("Work Sans", [{ weight: 300 }, { weight: 500 }])}
       ${await inlineSASS("components/shell.sass")}

@@ -1,6 +1,7 @@
 import dotenv from "dotenv";
 dotenv.config({ path: "../.env" });
 
+import { copyFileSync } from "fs";
 import { compilePages, enableDebug } from "page-compiler";
 import donateOnceCompleted from "./pages/donate-once-completed";
 import donateOnceIdeal from "./pages/donate-once-ideal";
@@ -10,6 +11,8 @@ import privacyPolicy from "./pages/privacy-policy";
 import { Tr, createTr, defaultLang, trLangs } from "./translations/tr";
 
 enableDebug();
+
+copyFileSync("icons/favicon.png", "root/favicon.png");
 
 interface Page {
   html: string;
